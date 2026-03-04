@@ -1,0 +1,20 @@
+def cube(n):
+    if type(n) is int or type(n) is float:
+        return n*n*n
+    return "type not valid"
+
+Create a function named cube  that returns  the cube of a given number. The cube of a number is the result of multiplying the number by itself three times. For example, the cube of 3 is:
+
+3
+×
+3
+×
+3
+=
+27   
+The function should take a single argument and use the type() function to check If the argument is a number (int or float). If it is not a number, the function should return the following string "type not valid".
+
+Valids type:
+
+int
+float
