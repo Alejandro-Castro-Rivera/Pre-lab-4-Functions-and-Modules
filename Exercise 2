@@ -1,0 +1,16 @@
+def is_valid_triangle(a, b, c):
+    if a + b > c and a + c > b and b + c > a:
+        return True
+    return False
+
+Create a Python boolean function named is_valid_triangle that takes the length of three sides segments (a, b, c) and checks if they can form a valid triangle.  For this to be true the sides must satify the triangle inequality theorem.
+
+The function should return True if the sides can form a valid triangle,  and False otherwise.
+
+Triangle Inequality Theorem.
+
+Three sides a, b and c form a valid triangle if and only if all of the following conditions are true:
+
+a + b > c
+a + c > b
+b + c > a
