@@ -1,0 +1,43 @@
+def vacation(company,months_worked):
+    if str(company)=="Facebook":
+        return 20
+    elif str(company)=="Amazon":
+        if months_worked >= 12:
+            return 15
+        return 10
+    elif str(company)=="Google":
+        if 36 <= months_worked < 60:
+            return 20
+        elif months_worked >= 60:
+            return 25
+        return 15
+    elif str(company)=="Apple":
+        if 36 >= months_worked < 48:
+            return 15
+        elif months_worked >= 48:
+            return 12 + (months_worked // 12)
+        return 12
+    elif str(company)=="Microsoft":
+        if months_worked >= 60:
+            return 15 + (5 * months_worked // 60)
+        return 15
+    return 0
+
+You will create a function that determines how many vacation days per year an employee earns, based on the company they work for and how long they’ve worked there. Different companies have different vacation policies.
+
+Function: vacation(company, months)
+
+Parameters:
+
+company (string): the name of the company (one of "Facebook", "Amazon", "Google", "Apple", "Microsoft")
+months (int): the number of months the employee has worked at the company
+Return:
+
+int: the number of vacation days the employee earns per year
+Company Policies:
+
+Facebook: All employees earn 20 days per year, regardless of time worked.
+Amazon: New employees earn 10 days per year. After 1 year (≥ 12 months), this increases to 15 days per year.
+Google: New employees earn 15 days per year. After 3 years (≥ 36 months), this increases to 20 days per year. After 5 years (≥ 60 months), this increases to 25 days per year.
+Apple: New employees earn 12 days per year. After 3 years (≥ 36 months), this increases to 15 days per year. After 4 years (≥ 48 months), and every year after that, it increases by 1 more day per year.
+Microsoft: New employees earn 15 days per year. After every 5 years (≥ 60, 120, … months), vacation is increased by 5 days, up to a maximum of 30 days.
