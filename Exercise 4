@@ -1,0 +1,43 @@
+def bmi(weight,height):
+    return round(weight/(height**2),2)
+
+def bmi_category(weight,height):
+    if bmi(weight,height) < 18.5:
+        return "Underweight"
+    elif 18.5 <= bmi(weight,height) < 25:
+        return "Normal weight"
+    elif 25 <= bmi(weight,height) < 30:
+        return "Overweight"
+    return "Obese"
+
+You will create two functions that work together to evaluate a person’s health category based on their Body Mass Index (BMI).
+
+Function 1: bmi(weight, height)
+
+Parameters:
+
+weight (float): weight in kilograms
+height (float): height in meters
+Return:
+
+float: the BMI value (rounded to 2 decimal places)
+Explanation:
+BMI is a measure of body fat based on weight relative to height. The formula is:
+
+
+
+Function 2: bmi_category(weight, height)
+
+Parameters:
+
+weight (float): weight in kilograms
+height (float): height in meters
+Return:
+
+string: the health category
+This function must call bmi(weight, height) to calculate the BMI, then use that value to decide a category:
+
+BMI < 18.5 → "Underweight"
+18.5 ≤ BMI < 25 → "Normal weight"
+25 ≤ BMI < 30 → "Overweight"
+BMI ≥ 30 → "Obese"
